@@ -21,6 +21,12 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+import sphinx_bootstrap_theme
+
+
+def setup(app):
+    app.add_stylesheet('custom.css')
+
 
 # -- General configuration ------------------------------------------------
 
@@ -31,8 +37,12 @@
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.mathjax',
-    'sphinx.ext.githubpages']
+extensions = [
+    'sphinx.ext.mathjax',
+    'sphinx.ext.githubpages',
+    'nbsphinx',
+    'sphinx.ext.mathjax',
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -70,7 +80,7 @@ language = 'ja'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = []
+exclude_patterns = ['_build', '**.ipynb_checkpoints']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -84,12 +94,35 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
 
-# Theme options are theme-specific and customize the look and feel of a theme
-# further.  For a list of options available for each theme, see the
-# documentation.
-#
+# ...
+
+# Activate the theme.
+html_theme = 'bootstrap'
+html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+
+# ------ sphinx_bootstrap_theme configs
+# html_logo = "my_logo.png"
+html_theme_options = {
+    'navbar_title': "kubor.github.io",
+    'navbar_site_name': "",
+    'navbar_links': [
+        ("Posts", "posts"),
+        ("Slides", "slides"),
+        ("SNS", "sns"),
+    ],
+    'navbar_sidebarrel': False,
+    'navbar_pagenav': False,
+    'navbar_pagenav_name': "Page",
+    'globaltoc_depth': 2,
+    'globaltoc_includehidden': "true",
+    'navbar_class': "navbar navbar-inverse",
+    'navbar_fixed_top': "true",
+    'source_link_position': "footer",
+    'bootswatch_theme': "flatly",
+    'bootstrap_version': "3",
+}
+
 # html_theme_options = {}
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -153,6 +186,3 @@ texinfo_documents = [
      author, 'kuborgithubio', 'One line description of project.',
      'Miscellaneous'),
 ]
-
-
-
