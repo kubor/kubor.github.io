@@ -186,3 +186,7 @@ texinfo_documents = [
      author, 'kuborgithubio', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+html_sidebars = {
+    'posts/*': ['localtoc.html']
+}

@@ -7,4 +7,4 @@ Posts
 .. toctree::
     :maxdepth: 2
 
-    souyakuchan_stats
+    posts/souyakuchan_stats
