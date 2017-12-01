@@ -26,6 +26,7 @@ import sphinx_bootstrap_theme
 
 def setup(app):
     app.add_stylesheet('custom.css')
+    app.add_javascript('https://cdn.embedly.com/widgets/platform.js')
 
 
 # -- General configuration ------------------------------------------------
