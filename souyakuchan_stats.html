@@ -1,0 +1,976 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>創薬ちゃん統計 &#8212; kubor.github.io  ドキュメント</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="Slides" href="slides.html" />
+    <link rel="prev" title="Posts" href="posts.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          kubor.github.io</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="posts.html">Posts</a></li>
+                <li><a href="slides.html">Slides</a></li>
+                <li><a href="sns.html">SNS</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html"> <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="posts.html">Posts</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="posts.html#id1">2017</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="slides.html">Slides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="slides.html#id1">2017</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sns.html">SNS</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput,
+div.nbinput div.prompt,
+div.nbinput div.input_area,
+div.nbinput div[class*=highlight],
+div.nbinput div[class*=highlight] pre,
+div.nboutput,
+div.nbinput div.prompt,
+div.nbinput div.output_area,
+div.nboutput div[class*=highlight],
+div.nboutput div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput,
+div.nboutput {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput,
+    div.nboutput {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput div.prompt pre {
+    color: #303F9F;
+}
+
+/* output prompt */
+div.nboutput div.prompt pre {
+    color: #D84315;
+}
+
+/* all prompts */
+div.nbinput div.prompt,
+div.nboutput div.prompt {
+    min-width: 9ex;
+    padding-top: 0.4em;
+    padding-right: 0.4em;
+    text-align: right;
+    flex: 0;
+}
+@media (max-width: 540px) {
+    div.nbinput div.prompt,
+    div.nboutput div.prompt {
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput div.prompt.empty {
+        padding: 0;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput div.prompt pre,
+div.nboutput div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput div.input_area,
+div.nboutput div.output_area {
+    padding: 0.4em;
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput div.input_area,
+    div.nboutput div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput div.input_area {
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    background: #f7f7f7;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.pngmath center alignment in output cells */
+div.nboutput div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+</style>
+<div class="section" id="創薬ちゃん統計">
+<h1>創薬ちゃん統計<a class="headerlink" href="#創薬ちゃん統計" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="line-block">
+<div class="line">この記事は創薬アドベントカレンダー2日目の記事です。</div>
+<div class="line"><a class="reference external" href="https://adventar.org/calendars/2412">創薬 Advent Calendar 2017 -
+Adventar</a></div>
+</div>
+<div class="section" id="Overview">
+<h2>Overview<a class="headerlink" href="#Overview" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li>[創薬ちゃん(&#64;souyakuchan)](<a class="reference external" href="https://twitter.com/souyakuchan">https://twitter.com/souyakuchan</a>)
+の化合物描画Bot機能でこれまでに詠唱された化合物を集計してみた</li>
+<li>API操作には <a class="reference external" href="http://www.tweepy.org/">Tweepy</a> と
+<a class="reference external" href="https://github.com/ddquest/chem_bot">ddquest/chem_bot</a> を使用</li>
+<li>取得日は 12/1（金）</li>
+<li>特に理由は無いですがPythonのバージョンは 3.5.3 です</li>
+</ul>
+</div>
+<div class="section" id="下準備">
+<h2>下準備<a class="headerlink" href="#下準備" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>早速やっていきましょう。まずはデータ取得のための下準備としてPythonによるTwitter
+API認証とツイート取得方法を確認します。</p>
+<div class="section" id="API-認証">
+<h3>API 認証<a class="headerlink" href="#API-認証" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>tweepy を使用して予め登録したアクセストークンでOAuth認証します。</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">tweepy</span>
+
+<span class="n">consumer_key</span> <span class="o">=</span> <span class="s1">&#39;XXXXXXXXXXXXXXXXXXXXXX&#39;</span>
+<span class="n">consumer_secret</span> <span class="o">=</span><span class="s1">&#39;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&#39;</span>
+<span class="n">access_token</span> <span class="o">=</span> <span class="s1">&#39;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&#39;</span>
+<span class="n">access_token_secret</span> <span class="o">=</span> <span class="s1">&#39;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&#39;</span>
+
+<span class="n">auth</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">OAuthHandler</span><span class="p">(</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="p">)</span>
+<span class="n">auth</span><span class="o">.</span><span class="n">set_access_token</span><span class="p">(</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="p">)</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">API</span><span class="p">(</span><span class="n">auth</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="ツイートの本文を取得してみる">
+<h3>ツイートの本文を取得してみる<a class="headerlink" href="#ツイートの本文を取得してみる" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>創薬ちゃんの最新ツイートを1件取得して<code class="docutils literal"><span class="pre">status.text</span></code>の中身を見てみます。</p>
+<p>集計時点での最新ツイートです。</p>
+<blockquote class="twitter-tweet" data-conversation="none" data-cards="hidden" data-lang="ja"><p lang="cy" dir="ltr">&quot;CC1CC2(C)C(=CC1=O)CCC1C3CCC(O)(C(=O)CO)C3(C)CC(O)C12F&quot; #souyakuchan_magic pic.twitter.com/Ki3gTIYIcu</p><p>— 創薬ちゃん (&#64;souyakuchan) 2017年12月1日</p>
+</blockquote><div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">status</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">tweepy</span><span class="o">.</span><span class="n">Cursor</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">user_timeline</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">status</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+@__YamYuki__ @souyakuchan &#34;CC1CC2(C)C(=CC1=O)CCC1C3CCC(O)(C(=O)CO)C3(C)CC(O)C12F&#34; #souyakuchan_magic https://t.co/Ki3gTIYIcu
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="メンション付きツイートを取得してみる">
+<h3>メンション付きツイートを取得してみる<a class="headerlink" href="#メンション付きツイートを取得してみる" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">次は、創薬ちゃんにメンションされたツイートを取得してみます。</div>
+<div class="line">tweepyの<code class="docutils literal"><span class="pre">api.mentions_timeline()</span></code>が便利です。</div>
+</div>
+<div class="line-block">
+<div class="line">ドキュメントを見る際にlatestかどうか確認したほうが良いです。</div>
+<div class="line"><a class="reference external" href="http://docs.tweepy.org/">http://docs.tweepy.org/</a>　にアクセスすると <code class="docutils literal"><span class="pre">3.5.0</span></code>
+に誘導されるのですが、そこにはこのメソッドがありません。</div>
+<div class="line">latestはこちらです。 <a class="reference external" href="http://docs.tweepy.org/en/latest">http://docs.tweepy.org/en/latest</a></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">mention</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">tweepy</span><span class="o">.</span><span class="n">Cursor</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">mentions_timeline</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">mention</span><span class="o">.</span><span class="n">text</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[4]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>&quot;Today&#39;s post: https://t.co/Bgvlul5q8S @Lizreel_spindle @souyakuchan @OrenoSource @edamame0811 @bachemis… https://t.co/iXGugBWAtI&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="投稿者を取得してみる">
+<h3>投稿者を取得してみる<a class="headerlink" href="#投稿者を取得してみる" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>誰がツイートしたかわからないので、投稿者情報も取得してみます。</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;screen name: @</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mention</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">screen_name</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;user name:&#39;</span><span class="p">,</span> <span class="n">mention</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+screen name: @suimye
+user name: 無印良品
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="ツイート分析">
+<h2>ツイート分析<a class="headerlink" href="#ツイート分析" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">基本的なツイート取得方法がわかったのでツイート内容を分析していきます。</div>
+<div class="line">どんどんPythonで処理していきます。</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">smiles</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">iupacs</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">mention</span> <span class="ow">in</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Cursor</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">mentions_timeline</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="s1">&#39;http&#39;</span> <span class="ow">in</span> <span class="n">mention</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="n">split_texts</span> <span class="o">=</span> <span class="n">mention</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+    <span class="n">prefix</span> <span class="o">=</span> <span class="n">split_texts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">split_texts</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">tweet_text</span> <span class="o">=</span> <span class="n">split_texts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="s1">&#39;smiles&#39;</span> <span class="ow">in</span> <span class="n">prefix</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+        <span class="c1"># トリガーとして smiles: を取り除いたあとの後ろのテキストから改行を取り除いて連結</span>
+        <span class="n">smiles</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">mention</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">screen_name</span><span class="p">,</span> <span class="n">tweet_text</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="s1">&#39;iupac&#39;</span> <span class="ow">in</span> <span class="n">prefix</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+        <span class="c1"># トリガーとして iupac: を取り除いたあとの後ろのテキストから改行を取り除いて連結</span>
+        <span class="n">iupacs</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">mention</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">screen_name</span><span class="p">,</span> <span class="n">tweet_text</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="クレンジング">
+<h3>クレンジング<a class="headerlink" href="#クレンジング" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>期待通り行けば詠唱呪文（ <code class="docutils literal"><span class="pre">iupac:</span> <span class="pre">~~~~</span></code> or <code class="docutils literal"><span class="pre">smiles:</span> <span class="pre">~~~~~</span></code>
+）のみを取ってこられるはずですが、除外できていないのも混じるので、思い切って<a class="reference external" href="http://www.rdkit.org/">RDKit</a>でパースできるものだけ残します。</p>
+<p>期待していないけど入っちゃうものの例：<code class="docutils literal"><span class="pre">('souyakuchan',</span> <span class="pre">'SMILES式&quot;&quot;&#64;souyakuchan</span> <span class="pre">iupac')</span></code></p>
+<p>IUPAC名についてはちょっと面倒なので化合物詠唱bot同様に、ASCII変換できない文字が含まれるものは除外することにしました。</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">rdkit</span> <span class="k">import</span> <span class="n">Chem</span>
+
+<span class="n">smiles_clean</span> <span class="o">=</span> <span class="p">[(</span><span class="n">user</span><span class="p">,</span> <span class="n">smi</span><span class="p">)</span> <span class="k">for</span> <span class="n">user</span><span class="p">,</span> <span class="n">smi</span> <span class="ow">in</span> <span class="n">smiles</span> <span class="k">if</span> <span class="n">Chem</span><span class="o">.</span><span class="n">MolFromSmiles</span><span class="p">(</span><span class="n">smi</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;クレンジング前のSMILES数:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">smiles</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;RDKitでパース可能なSMILES数:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">smiles_clean</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;RDKitでパース可能なSMILES数（重複なし）:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">smiles_clean</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+クレンジング前のSMILES数: 263
+RDKitでパース可能なSMILES数: 222
+RDKitでパース可能なSMILES数（重複なし）: 202
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">check_ascii</span><span class="p">(</span><span class="n">sｔrings</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Except multibyte characters in strings.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">strings</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">except</span> <span class="ne">UnicodeEncodeError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">iupacs_clean</span> <span class="o">=</span> <span class="p">[(</span><span class="n">user</span><span class="p">,</span> <span class="n">ipc</span><span class="p">)</span> <span class="k">for</span> <span class="n">user</span><span class="p">,</span> <span class="n">ipc</span> <span class="ow">in</span> <span class="n">iupacs</span> <span class="k">if</span> <span class="n">check_ascii</span><span class="p">(</span><span class="n">ipc</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;クレンジング前のIUPAC名数:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">iupacs</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ASCII変換できるIUPAC名数:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">iupacs_clean</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ASCII変換できるIUPAC名数（重複なし）:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">iupacs_clean</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+クレンジング前のIUPAC名数: 186
+ASCII変換できるIUPAC名数: 175
+ASCII変換できるIUPAC名数（重複なし）: 155
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="SMILES投稿者ランキング">
+<h3>SMILES投稿者ランキング<a class="headerlink" href="#SMILES投稿者ランキング" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">誰が一番たくさん創薬ちゃんにSMILESを投げたか調べます（重複を含む）。</div>
+<div class="line">こういうときは <code class="docutils literal"><span class="pre">collections</span></code>が便利です。</div>
+<div class="line"><code class="docutils literal"><span class="pre">sorted</span></code>を使って上手く降順に投稿数を並び替えます。</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">collections</span>
+<span class="n">smi_count_result</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">([</span><span class="n">user</span> <span class="k">for</span> <span class="n">user</span><span class="p">,</span> <span class="n">smi</span> <span class="ow">in</span> <span class="n">smiles_clean</span><span class="p">])</span>
+<span class="n">smi_count_result_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">smi_count_result</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;SMILESを投稿したことのある人の数:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">smi_count_result_sorted</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+SMILESを投稿したことのある人の数: 38
+</pre></div></div>
+</div>
+<div class="section" id="SMILES投稿数をユーザー別にプロットする">
+<h4>SMILES投稿数をユーザー別にプロットする<a class="headerlink" href="#SMILES投稿数をユーザー別にプロットする" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="line-block">
+<div class="line">折角なのでプロットしてみましたが、完全に出来レースでしたね。</div>
+<div class="line">あと、思ったよりも投稿している人の数が多いです。１０人ぐらいで楽しんでいるのかと少しさびしくも思っていましたが、そんなことないですね。</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="s2">&quot;talk&quot;</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">smi_count_result_sorted</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">smi_count_result_sorted</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mf">11.7</span><span class="p">,</span> <span class="mf">8.27</span><span class="p">)</span>  <span class="c1"># 思い切ってA4サイズにしよう!！</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;pastel&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Posted SMILESs&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;User&#39;</span><span class="p">)</span>
+<span class="n">loc</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">()</span>
+<span class="n">text_config</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/souyakuchan_stats_23_0.png" src="_images/souyakuchan_stats_23_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="IUPAC名投稿数ランキング">
+<h3>IUPAC名投稿数ランキング<a class="headerlink" href="#IUPAC名投稿数ランキング" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>同じ方法でやってみます。</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">ipc_count_result</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">([</span><span class="n">user</span> <span class="k">for</span> <span class="n">user</span><span class="p">,</span> <span class="n">iupac</span> <span class="ow">in</span> <span class="n">iupacs_clean</span><span class="p">])</span>
+<span class="n">ipc_count_result_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">ipc_count_result</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;IUPAC名を投稿したことのある人の数:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ipc_count_result_sorted</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+IUPAC名を投稿したことのある人の数: 38
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">ipc_count_result_sorted</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">ipc_count_result_sorted</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mf">11.7</span><span class="p">,</span> <span class="mf">8.27</span><span class="p">)</span>  <span class="c1"># 思い切ってA4サイズにしよう!！</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;pastel&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Posted IUPACs&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;User&#39;</span><span class="p">)</span>
+<span class="n">loc</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">()</span>
+<span class="n">text_config</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/souyakuchan_stats_27_0.png" src="_images/souyakuchan_stats_27_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="全投稿者リストを作ってみる">
+<h3>全投稿者リストを作ってみる<a class="headerlink" href="#全投稿者リストを作ってみる" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>創薬ちゃんと遊んでくれた愉快なユーザー一覧表が欲しいですね。作りましょう。</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">all_users</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">ipc_count_result</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">smi_count_result</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;愉快なユーザー様数:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_users</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;愉快なユーザー様:&#39;</span><span class="p">,</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">all_users</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+愉快なユーザー様数: 55
+愉快なユーザー様: i_taiga1, n0rr, hicassie_buke, akami_orihime, tsutsunonaka, Stas_Otto, inanzu, lipopolysacchar, Fizz_DI, iwatobipen, kusa_mix, tkochi0603, caol_kay_ila, IsolatedLonely, yi_chemist, shimasho, yakuichan, kosenstudent, logictex2, elf_alf_no11, mi1377sakura, mizuki_kayano, YXLI, Haru102i, siero5335, bonohu, tonets, __YamYuki__, maskot1977, cure_neucx, social_hcdd, rkakamilan, souyakuchan, piyota0, naringenin666, songbirdabeam, kwsm_, macky_jn, cykinso, 813_CT, Lizreel_spindle, tiba_chem, kubor_, ken3_ketone, y__sama, Mochimasa, hinaichigo, stnc_phrm, suimye, profoundnotice, syoifczeri, hiro_h, shimakid, mizarjp, kalashnikov47p
+</pre></div></div>
+</div>
+<p>どちらかのみを使っているユーザーもいるんですね。</p>
+</div>
+<div class="section" id="変換できなかったSMILESを抽出してみる">
+<h3>変換できなかったSMILESを抽出してみる<a class="headerlink" href="#変換できなかったSMILESを抽出してみる" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">分析をすすめます。</div>
+<div class="line">変換できなかったSMILESについては、
+<code class="docutils literal"><span class="pre">すまない。このSMILESは上手く変換できなかったようだ。</span></code>
+という創薬ちゃんのお決まりの台詞があるのでこれをフラグに集計します。</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">unrecognized_smiles</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">status</span> <span class="ow">in</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Cursor</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">user_timeline</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">status</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;すまない。このSMILESは上手く変換できなかったようだ。&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">unrecognized_smiles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">status</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;。&#39;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;変換できなかったSMILES数:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">unrecognized_smiles</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+変換できなかったSMILES数: 26
+</pre></div></div>
+</div>
+<p>全部で26件の変換できなかったSMILESたちを抽出できました。</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;重複していたSMILES:&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">unrecognized_smiles</span><span class="p">))</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">unrecognized_smiles</span><span class="p">))))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+重複していたSMILES: 1
+</pre></div></div>
+</div>
+<p>重複しているSMILESが1件あるので、　<code class="docutils literal"><span class="pre">collections.Counter()</span></code>を使って抽出してみます。</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">counted</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">(</span><span class="n">unrecognized_smiles</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;duplicated&#39;</span><span class="p">,</span> <span class="p">[(</span><span class="n">smiles</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span> <span class="k">for</span> <span class="n">smiles</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">counted</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+duplicated [(&#39;CC(=O)[O-][Na+]&#39;, 2)]
+</pre></div></div>
+</div>
+<p><code class="docutils literal"><span class="pre">CC(=O)[O-][Na+]</span></code> が2回ありました。</p>
+<div class="section" id="ほんとに変換できないのか">
+<h4>ほんとに変換できないのか<a class="headerlink" href="#ほんとに変換できないのか" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="line-block">
+<div class="line">念のためほんとに変換できないかRDKitで読み込んで確かめてみます。</div>
+<div class="line">上でも書きましたが、RDKitの<code class="docutils literal"><span class="pre">Chem.MolFromSmiles()</span></code>は変換できないSMILESが引数に与えられると<code class="docutils literal"><span class="pre">None</span></code>を返しますので、これを使って判定します。</div>
+<div class="line">実際に創薬ちゃんの化合物詠唱機能でもこのメソッドを使用しています。</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">rdkit</span> <span class="k">import</span> <span class="n">Chem</span>
+
+<span class="n">mol</span> <span class="o">=</span> <span class="p">[</span><span class="n">Chem</span><span class="o">.</span><span class="n">MolFromSmiles</span><span class="p">(</span><span class="n">smiles</span><span class="p">)</span> <span class="k">for</span> <span class="n">smiles</span> <span class="ow">in</span> <span class="n">unrecognized_smiles</span><span class="p">]</span>
+
+<span class="n">mol</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[23]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>[None,
+ None,
+ None,
+ None,
+ None,
+ None,
+ None,
+ None,
+ None,
+ None,
+ None,
+ None,
+ None,
+ None,
+ None,
+ None,
+ None,
+ None,
+ None,
+ None,
+ None,
+ None,
+ None,
+ None,
+ None,
+ None]
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">すべて<code class="docutils literal"><span class="pre">None</span></code>でした。</div>
+<div class="line">ただしこれらのSMILESすべてがSMILESとして成り立たないというわけではなく、あくまでRDKitでの解釈ができないSMILESであるということを意味します。</div>
+</div>
+</div>
+<div class="section" id="変換できるSMILESでも試しておく">
+<h4>変換できるSMILESでも試しておく<a class="headerlink" href="#変換できるSMILESでも試しておく" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="line-block">
+<div class="line">一応変換可能なSMILESも試してみます。</div>
+<div class="line">ついでにJupyter notebook
+上で簡単に化合物の構造式を描画する機能が用意されているので、これを使って構造式も描いて見ます。</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [24]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">rdkit.Chem.Draw</span> <span class="k">import</span> <span class="n">IPythonConsole</span>
+
+<span class="n">smiles</span> <span class="o">=</span> <span class="s1">&#39;c1ccccc1&#39;</span>
+<span class="n">mol</span> <span class="o">=</span> <span class="n">Chem</span><span class="o">.</span><span class="n">MolFromSmiles</span><span class="p">(</span><span class="n">smiles</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mol:&#39;</span><span class="p">,</span> <span class="n">mol</span><span class="p">)</span>
+<span class="n">mol</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+mol: &lt;rdkit.Chem.rdchem.Mol object at 0x10c687080&gt;
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[24]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<img alt="_images/souyakuchan_stats_43_1.png" src="_images/souyakuchan_stats_43_1.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="まとめ">
+<h2>まとめ<a class="headerlink" href="#まとめ" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Tweepyを使用することで簡単にツイートの取得が可能でした。</p>
+<div class="line-block">
+<div class="line">おおよそ創薬ちゃんの化合物詠唱機能についてはここで使用した手法の組み合わせで成り立っています。
+今後とも創薬ちゃんをどうぞよろしくお願いします。</div>
+<div class="line">さらなるバージョンアップにもご期待下さい！</div>
+</div>
+<p>ちなみに化合物別に集計したところ、SMILES、IUPAC名ともにダントツでベンゼンが人気でした。</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="集計表">
+<h2>集計表<a class="headerlink" href="#集計表" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="80%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">content</th>
+<th class="head">value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>クレンジング前のSMILES数</td>
+<td>263</td>
+</tr>
+<tr class="row-odd"><td>RDKitでパース可能なSMILES数</td>
+<td>222</td>
+</tr>
+<tr class="row-even"><td>RDKitでパース可能なSMILES数（重複なし）</td>
+<td>202</td>
+</tr>
+<tr class="row-odd"><td>クレンジング前のIUPAC名数</td>
+<td>180</td>
+</tr>
+<tr class="row-even"><td>ASCII変換できるIUPAC名数</td>
+<td>171</td>
+</tr>
+<tr class="row-odd"><td>ASCII変換できるIUPAC名数（重複なし）</td>
+<td>152</td>
+</tr>
+<tr class="row-even"><td>SMILESを投稿したことのある人の数</td>
+<td>38</td>
+</tr>
+<tr class="row-odd"><td>IUPAC名を投稿したことのある人の数</td>
+<td>38</td>
+</tr>
+<tr class="row-even"><td>愉快なユーザー様数</td>
+<td>55</td>
+</tr>
+<tr class="row-odd"><td>変換できなかったSMILES数</td>
+<td>26</td>
+</tr>
+<tr class="row-even"><td>もっともたくさんSMILESを投稿した人</td>
+<td>&#64;kubor_</td>
+</tr>
+<tr class="row-odd"><td>もっともたくさんIUPAC名を投稿した人</td>
+<td>&#64;kubor_</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="_sources/souyakuchan_stats.ipynb.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, kubor.<br/>
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5 で生成しました。<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

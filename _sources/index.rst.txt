@@ -1,20 +1,12 @@
-.. kubor.github.io documentation master file, created by
-   sphinx-quickstart on Fri Dec  1 20:08:17 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+kubor.github.io
+===============
 
-Welcome to kubor.github.io's documentation!
-===========================================
+ソーシャル創薬美少女こと `kubor
+<https://twitter.com/kubor_>`_ が書いたものや作ったものなど
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+    :maxdepth: 1
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+    posts
+    slides
+    sns

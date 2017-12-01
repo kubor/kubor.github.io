@@ -1,1 +1,5 @@
-/* This file intentionally left blank. */
+.table {
+    width: auto;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
