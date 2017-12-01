@@ -189,5 +189,6 @@ texinfo_documents = [
 ]
 
 html_sidebars = {
-    'posts/*': ['localtoc.html']
+    'posts/*': ['localtoc.html'],
+    'slides': ['localtoc.html']
 }
