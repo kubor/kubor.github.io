@@ -6,6 +6,20 @@ Slides
 2017
 ----
 
+IPAB 第4回IT創薬コンテスト
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`IPAB CADD contest 2017 KUF <https://speakerdeck.com/kubor/ipab-cadd-contest-2017-kuf>`_
+
+IPAB主催 第４回 IT創薬コンテスト：「コンピュータで薬のタネを創る４」 [*]_ 
+での手法紹介スライド
+
+.. raw:: html
+
+    <blockquote class="embedly-card"><h4><a href="https://speakerdeck.com/kubor/ipab-cadd-contest-2017-kuf">IPAB CADD contest 2017 KUF</a></h4><p>IPAB主催 第４回 IT創薬コンテスト：「コンピュータで薬のタネを創る４」 での手法紹介スライド http://www.ipab.org/eventschedule/contest/contest4</p></blockquote>
+
+.. [*] http://www.ipab.org/eventschedule/contest/contest4
+
 chemo_wakate_6
 ^^^^^^^^^^^^^^
 
