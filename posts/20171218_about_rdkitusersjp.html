@@ -3,32 +3,19 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>rdkit-users-jp について &#8212; kubor.github.io  ドキュメント</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <script type="text/javascript" src="https://cdn.embedly.com/widgets/platform.js"></script>
     <script type="text/javascript" src="../_static/translations.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
     <link rel="next" title="創薬ちゃん統計" href="souyakuchan_stats.html" />
@@ -38,6 +25,10 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110468666-1"></script>
@@ -49,8 +40,7 @@
   gtag('config', 'UA-110468666-1');
 </script>
 
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
     <div class="container">
@@ -97,7 +87,7 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary">
-  <h3>目次</h3>
+  <h3>Table Of Contents</h3>
   <ul>
 <li><a class="reference internal" href="#">rdkit-users-jp について</a><ul>
 <li><a class="reference internal" href="#id2">rdkit-users-jp について</a></li>
@@ -110,51 +100,51 @@
 
         </div>
       </div>
-    <div class="col-md-9 content">
+    <div class="body col-md-9 content" role="main">
       
   <div class="section" id="rdkit-users-jp">
 <h1>rdkit-users-jp について<a class="headerlink" href="#rdkit-users-jp" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="admonition attention">
-<p class="first admonition-title">注意</p>
-<p class="last">この記事は創薬アドベントカレンダー18日目の記事です。<a class="reference external" href="https://adventar.org/calendars/2412">創薬 Advent Calendar 2017</a></p>
+<p class="admonition-title">注意</p>
+<p>この記事は創薬アドベントカレンダー18日目の記事です。<a class="reference external" href="https://adventar.org/calendars/2412">創薬 Advent Calendar 2017</a></p>
 </div>
 <p>創薬の現場では計算化学による解析技術が応用されており、解析には専用のソフトウェアが使われます。その種類は多様なため、どのソフトをどう使用するのかを決める技術選定は、重要な仕事の1つだと僕は思います。</p>
-<p>ここではケモインフォマティクス全般に幅広く利用可能なRDKit <a class="footnote-reference" href="#id7" id="id1">[1]</a> のユーザー会について紹介します。</p>
+<p>ここではケモインフォマティクス全般に幅広く利用可能なRDKit <a class="footnote-reference brackets" href="#id7" id="id1">1</a> のユーザー会について紹介します。</p>
 <div class="section" id="id2">
 <h2>rdkit-users-jp について<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>rdkit-users-jp は日本のRDKitユーザーのための情報交換コミュニティとして2017年6月23日に発足しました。
 コミュニティではSlackとMLを用意し、情報交換をしたり、公式ドキュメントの翻訳作業などを行っています。
 これからRDKitを使われる方、RDKitを既に使っている方など、どなたでも参加することが出来ますのでぜひ起こしください。</p>
 <ul class="simple">
-<li>ユーザー会WEBサイト： <a class="reference external" href="https://rdkit-users.jp">https://rdkit-users.jp</a></li>
-<li>ユーザー会のSlack： <a class="reference external" href="https://rdkit-users-jp.slack.com/join/shared_invite/enQtMjg3ODU1Mzk3OTg3LTJhNmQ1ODM3NDIzNTQyZGI5MzliZDg0MjA1ZGZlNGMyNTA0NThiZDcxMTQ1MjNhMzEwYzI3MDA3OTUzOGU2MzY">Join Slack here</a></li>
+<li><p>ユーザー会WEBサイト： <a class="reference external" href="https://rdkit-users.jp">https://rdkit-users.jp</a></p></li>
+<li><p>ユーザー会のSlack： <a class="reference external" href="https://rdkit-users-jp.slack.com/join/shared_invite/enQtMjg3ODU1Mzk3OTg3LTJhNmQ1ODM3NDIzNTQyZGI5MzliZDg0MjA1ZGZlNGMyNTA0NThiZDcxMTQ1MjNhMzEwYzI3MDA3OTUzOGU2MzY">Join Slack here</a></p></li>
 </ul>
 </div>
 <div class="section" id="rdkit">
 <h2>RDKitとは<a class="headerlink" href="#rdkit" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p><a class="reference external" href="http://rdkit.org/">RDKit</a> とは、オープンソースで開発されているケモインフォマティクス解析ソフトです。
 ソースコードはGitHub上で管理されており、自由に閲覧、使用することができ、開発に参加することもできます。</p>
-<p>メーリングリスト <a class="footnote-reference" href="#id8" id="id4">[2]</a> もあり、日々活発に議論されています。</p>
+<p>メーリングリスト <a class="footnote-reference brackets" href="#id8" id="id4">2</a> もあり、日々活発に議論されています。</p>
 </div>
 <div class="section" id="id5">
 <h2>RDKitで出来ること<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>一部基本機能について抜粋します。</p>
 <blockquote>
 <div><ul class="simple">
-<li>Input/Output: SMILES/SMARTS, SDF, TDT, SLN 1, Corina mol2 1, PDB, sequence notation, FASTA (peptides only), HELM (peptides only)</li>
-<li>Substructure searching</li>
-<li>Canonical SMILES</li>
-<li>Chirality support (i.e. R/S or E/Z labeling)</li>
-<li>Chemical transformations (e.g. remove matching substructures)</li>
-<li>Chemical reactions</li>
-<li>Molecular serialization (e.g. mol &lt;-&gt; text)</li>
-<li>2D depiction, including constrained depiction</li>
-<li>Fingerprinting: Daylight-like, atom pairs, topological torsions, Morgan algorithm, “MACCS keys”, extended reduced graphs, etc.</li>
-<li>Similarity/diversity picking</li>
-<li>Gasteiger-Marsili charges</li>
-<li>Bemis and Murcko scaffold determination</li>
-<li>Salt stripping</li>
-<li>Functional-group filters</li>
+<li><p>Input/Output: SMILES/SMARTS, SDF, TDT, SLN 1, Corina mol2 1, PDB, sequence notation, FASTA (peptides only), HELM (peptides only)</p></li>
+<li><p>Substructure searching</p></li>
+<li><p>Canonical SMILES</p></li>
+<li><p>Chirality support (i.e. R/S or E/Z labeling)</p></li>
+<li><p>Chemical transformations (e.g. remove matching substructures)</p></li>
+<li><p>Chemical reactions</p></li>
+<li><p>Molecular serialization (e.g. mol &lt;-&gt; text)</p></li>
+<li><p>2D depiction, including constrained depiction</p></li>
+<li><p>Fingerprinting: Daylight-like, atom pairs, topological torsions, Morgan algorithm, “MACCS keys”, extended reduced graphs, etc.</p></li>
+<li><p>Similarity/diversity picking</p></li>
+<li><p>Gasteiger-Marsili charges</p></li>
+<li><p>Bemis and Murcko scaffold determination</p></li>
+<li><p>Salt stripping</p></li>
+<li><p>Functional-group filters</p></li>
 </ul>
 </div></blockquote>
 <p>残りの機能については次のページに網羅されています。
@@ -167,18 +157,14 @@
 <p>現在 rdkit-users-jp ではSphinxを利用したドキュメントの翻訳活動の準備中です。ご興味のある方はぜひご参加ください。</p>
 <hr class="docutils" />
 <p class="rubric">注釈</p>
-<table class="docutils footnote" frame="void" id="id7" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>RDKit: Open-Source Cheminformatics Software: <a class="reference external" href="http://rdkit.org/">http://rdkit.org/</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id8" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id4">[2]</a></td><td><a class="reference external" href="https://sourceforge.net/p/rdkit/mailman/">https://sourceforge.net/p/rdkit/mailman/</a></td></tr>
-</tbody>
-</table>
+<dl class="footnote brackets">
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>RDKit: Open-Source Cheminformatics Software: <a class="reference external" href="http://rdkit.org/">http://rdkit.org/</a></p>
+</dd>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dd><p><a class="reference external" href="https://sourceforge.net/p/rdkit/mailman/">https://sourceforge.net/p/rdkit/mailman/</a></p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -202,7 +188,7 @@
     </p>
     <p>
         &copy; Copyright 2017, kubor.<br/>
-      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5 で生成しました。<br/>
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2 で生成しました。<br/>
     </p>
   </div>
 </footer>

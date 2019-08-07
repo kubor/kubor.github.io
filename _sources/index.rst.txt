@@ -4,7 +4,7 @@ kubor.github.io
 .. list-table::
     :widths: auto
 
-    * - .. image:: https://pbs.twimg.com/profile_images/963091760908877829/EJ3WnTtJ_400x400.jpg
+    * - .. image:: ./_images/icon.jpg
             :alt: icon
             :target: https://twitter.com/kubor_
       - | PythonとVimで{バイオ,ケモ}インフォマティクスをするソーシャル創薬美少女こと `kubor <https://twitter.com/kubor_>`_ 。
